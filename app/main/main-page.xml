@@ -1,0 +1,52 @@
+<Page loaded="pageLoaded" navigatingTo="onNavigatingTo" xmlns="http://www.nativescript.org/tns.xsd">
+	<ActionBar title=" " backgroundColor="cyan">
+		<StackLayout orientation = "horizontal">
+			<Label text = "{{ textActionBar }}" />
+			<Button class="button_bar" tap="onNextWord" text = "Next" />
+			<Button class="button_bar" tap="onCheckAllImages" text = "All" />
+			<Button class="button_bar" tap="onCheckLastImages" text = "Last" />
+			<Button class="button_bar" tap="onSort" text = "Sort" />
+		</StackLayout>
+	</ActionBar>
+	<GridLayout columns="*" rows="*,*,*,*,3*">
+		<StackLayout row="0" class="code_row" orientation="horizontal">
+			<Image class="letter0" src="{{ img00 }}"/>
+			<Image class="letter0" src="{{ img01 }}"/>
+			<Image class="letter0" src="{{ img02 }}"/>
+			<Image class="letter0" src="{{ img03 }}"/>
+			<Image class="letter0" src="{{ img04 }}"/>
+			<Image class="letter0" src="{{ img05 }}"/>
+			<Image class="letter0" src="{{ img06 }}"/>
+			<Image class="letter0" src="{{ img07 }}"/>
+		</StackLayout>
+		<StackLayout row="1" class="code_row" orientation="horizontal">
+			<Image class="letter" src="{{ img10 }}" backgroundColor="{{bg_im0}}"/>
+			<Image class="letter" src="{{ img11 }}" backgroundColor="{{bg_im1}}"/>
+			<Image class="letter" src="{{ img12 }}" backgroundColor="{{bg_im2}}"/>
+			<Image class="letter" src="{{ img13 }}" backgroundColor="{{bg_im3}}"/>
+			<Image class="letter" src="{{ img14 }}" backgroundColor="{{bg_im4}}"/>
+			<Image class="letter" src="{{ img15 }}" backgroundColor="{{bg_im5}}"/>
+			<Image class="letter" src="{{ img16 }}" backgroundColor="{{bg_im6}}"/>
+			<Image class="letter" src="{{ img17 }}" backgroundColor="{{bg_im7}}"/>
+		</StackLayout>
+		<StackLayout row="2" class="code_row2" orientation="horizontal">
+			<Image class="letter1" src="{{ img20 }}"/>
+			<Image class="letter1" src="{{ img21 }}"/>
+			<Image class="letter1" src="{{ img22 }}"/>
+			<Image class="letter1" src="{{ img23 }}"/>
+			<Image class="letter1" src="{{ img24 }}"/>
+			<Image class="letter1" src="{{ img25 }}"/>
+			<Image class="letter1" src="{{ img26 }}"/>
+			<Image class="letter1" src="{{ img27 }}"/>
+		</StackLayout>
+		<StackLayout row="3" class="keyboard_background" orientation="vertical">
+			<StackLayout orientation="horizontal">
+				<Button class="button_encode" text="Clear" ontap="onClearCoding" backgroundColor="orange"/>
+				<Button class="button_encode" text="All" ontap="onAllCoding" backgroundColor="green"/>
+				<Button class="button_encode" text="{{textNewCoding}}" ontap="onNewCoding" backgroundColor="green"/>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout row="4" class="keyboard_background" orientation="vertical">
+		</StackLayout>
+	</GridLayout>
+</Page>
